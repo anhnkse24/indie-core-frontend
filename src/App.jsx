@@ -14,6 +14,8 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Admin from './pages/Admin';
 import AdminFinance from './pages/AdminFinance';
+import AdminModeration from './pages/AdminModeration';
+import AdminLogs from './pages/AdminLogs';
 
 function App() {
   return (
@@ -42,6 +44,8 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/admin/finance" element={<AdminFinance />} />
+            <Route path="/admin/moderation" element={<AdminModeration />} />
+            <Route path="/admin/logs" element={<AdminLogs />} />
           </Routes>
         </div>
 

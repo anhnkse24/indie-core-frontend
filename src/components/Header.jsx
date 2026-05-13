@@ -26,11 +26,10 @@ export default function Header() {
 
         {isAdmin ? (
           <div className="hidden lg:flex gap-8 items-center font-label-sm text-label-sm ml-auto mr-8">
-            <Link to="/admin" className="text-on-surface-variant/70 hover:text-on-surface transition-all duration-300">Overview</Link>
-            <Link to="/admin" className="text-on-surface-variant/70 hover:text-on-surface transition-all duration-300">Moderation</Link>
+            <Link to="/admin/moderation" className={location.pathname === '/admin/moderation' ? "text-primary-fixed border-b-2 border-primary-fixed-dim pb-1 shadow-[0_2px_10px_rgba(0,219,231,0.3)] brightness-125 transition-all" : "text-on-surface-variant/70 hover:text-on-surface transition-all duration-300"}>Moderation</Link>
             <Link to="/admin/finance" className={location.pathname === '/admin/finance' ? "text-primary-fixed border-b-2 border-primary-fixed-dim pb-1 shadow-[0_2px_10px_rgba(0,219,231,0.3)] brightness-125 transition-all" : "text-on-surface-variant/70 hover:text-on-surface transition-all duration-300"}>Finance</Link>
             <Link to="/admin" className={location.pathname === '/admin' ? "text-primary-fixed border-b-2 border-primary-fixed-dim pb-1 shadow-[0_2px_10px_rgba(0,219,231,0.3)] brightness-125 transition-all" : "text-on-surface-variant/70 hover:text-on-surface transition-all duration-300"}>Users</Link>
-            <Link to="/admin" className="text-on-surface-variant/70 hover:text-on-surface transition-all duration-300">Logs</Link>
+            <Link to="/admin/logs" className={location.pathname === '/admin/logs' ? "text-primary-fixed border-b-2 border-primary-fixed-dim pb-1 shadow-[0_2px_10px_rgba(0,219,231,0.3)] brightness-125 transition-all" : "text-on-surface-variant/70 hover:text-on-surface transition-all duration-300"}>Logs</Link>
           </div>
         ) : (
           <div className="hidden md:flex gap-8 items-center font-label-sm text-label-sm">
