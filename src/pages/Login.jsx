@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { User, Lock, Check, Code, Cloud } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
 
 export default function Login() {
   const navigate = useNavigate();
+  const [username, setUsername] = useState('');
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Chuyển hướng đến trang Home (Store) khi nhấn đăng nhập
-    navigate('/');
+    if (username === 'admin') {
+      navigate('/admin');
+    } else {
+      navigate('/');
+    }
   };
 
   return (
@@ -37,6 +41,8 @@ export default function Login() {
                   <User className="absolute left-4 w-5 h-5 text-primary-container/70 group-focus-within:text-primary-container transition-colors" />
                   <input
                     type="text"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
                     placeholder="Username"
                     className="w-full bg-surface-container-lowest border border-outline-variant/50 focus:border-primary-container focus:ring-1 focus:ring-primary-container py-4 pl-12 pr-4 text-on-surface font-body-md placeholder:text-on-surface-variant/40 rounded-lg transition-all outline-none shadow-[inset_0_0_10px_rgba(0,0,0,0.5)]"
                   />

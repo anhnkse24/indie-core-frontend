@@ -12,6 +12,8 @@ import Analytics from './pages/Analytics';
 import Library from './pages/Library';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Admin from './pages/Admin';
+import AdminFinance from './pages/AdminFinance';
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
             <Route path="/library" element={<Library />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/admin/finance" element={<AdminFinance />} />
           </Routes>
         </div>
 
