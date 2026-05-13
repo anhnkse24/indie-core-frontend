@@ -20,7 +20,7 @@ import AdminLogs from './pages/AdminLogs';
 function App() {
   return (
     <Router>
-      <div className="bg-surface-dim text-on-surface min-h-screen relative overflow-x-hidden dark">
+      <div className="bg-surface-dim text-on-surface min-h-screen flex flex-col relative overflow-x-hidden dark">
         {/* Ambient Blurred Background */}
         <div className="fixed inset-0 z-0 pointer-events-none">
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1605806616949-1e87b487bc2a?q=80&w=3270&auto=format&fit=crop')] bg-cover bg-center opacity-20 blur-3xl saturate-200"></div>
